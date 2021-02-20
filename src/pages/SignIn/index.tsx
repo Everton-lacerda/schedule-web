@@ -1,5 +1,7 @@
 import React from "react";
-import { FiLogIn } from 'react-icons/fi'
+import { FiLogIn, FiMail, FiLock } from 'react-icons/fi'
+import Button from "../../components/Button";
+import Input from "../../components/Input";
 import { Container, Content, Background } from "./styles";
 const SignIn: React.FC = () => (
   <Container>
@@ -7,11 +9,11 @@ const SignIn: React.FC = () => (
       <form>
         <h1>Faça se Login</h1>
 
-        <input type="email" placeholder="E-mail" />
+        <Input name="email" type="email" placeholder="E-mail" icon={FiMail} />
 
-        <input type="Senha" placeholder="Senha" />
+        <Input name="senha" type="Senha" placeholder="Senha" icon={FiLock} />
 
-        <button type="submit">Entrar</button>
+        <Button type="submit">Entrar</Button>
 
         <a href="forgot">Esqueci minha senha</a>
       </form>
