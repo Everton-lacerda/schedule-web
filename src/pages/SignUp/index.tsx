@@ -3,29 +3,36 @@ import { FiMail, FiLock, FiUser } from "react-icons/fi";
 import ButtonWhite from "../../components/ButtonWhite";
 import Input from "../../components/Input";
 import { Container, Content, Background } from "./styles";
-const SignUp: React.FC = () => (
-  <Container>
-    <Background>
-      <h1>Não perca tempo</h1>
-      <h2>Criar uma conta para ter acesso a plataforma</h2>
-    </Background>
+import { Form } from "@unform/web";
 
-    <Content>
-      <form>
-        <h1>Cadastro</h1>
+const SignUp: React.FC = () => {
+  function handleSubmit(data: object): void {
+    console.log(data);
+  }
+  return (
+    <Container>
+      <Background>
+        <h1>Não perca tempo</h1>
+        <h2>Criar uma conta para ter acesso a plataforma</h2>
+      </Background>
 
-        <Input name="name" type="text" placeholder="Nome" icon={FiUser} />
+      <Content>
+        <Form onSubmit={handleSubmit}>
+          <h1>Cadastro</h1>
 
-        <Input name="email" type="email" placeholder="E-mail" icon={FiMail} />
+          <Input name="name" type="text" placeholder="Nome" icon={FiUser} />
 
-        <Input name="senha" type="Senha" placeholder="Senha" icon={FiLock} />
+          <Input name="email" type="email" placeholder="E-mail" icon={FiMail} />
 
-        <ButtonWhite type="submit">Cadastrar</ButtonWhite>
-      </form>
+          <Input name="senha" type="Senha" placeholder="Senha" icon={FiLock} />
 
-      <a href="register">Fazer Login</a>
-    </Content>
-  </Container>
-);
+          <ButtonWhite type="submit">Cadastrar</ButtonWhite>
+        </Form>
+
+        <a href="register">Fazer Login</a>
+      </Content>
+    </Container>
+  );
+};
 
 export default SignUp;
