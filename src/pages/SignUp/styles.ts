@@ -9,6 +9,7 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
+  background-color: #102b3d;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,23 +25,24 @@ export const Content = styled.div`
 
     h1 {
       margin-bottom: 24px;
+      color: #ffffff;
     }
 
     > a {
-      color: #132129;
+      color: #ffffff;
       display: block;
       margin-top: 24px;
       text-decoration: none;
       transition: color 0.2s;
 
       &:hover {
-        color: ${shade(0.9, "#16384E")};
+        color: ${shade(0.9, "#ffffff")};
         font-weight: 500;
       }
     }
   }
   > a {
-    color: #132129;
+    color: #ffffff;
     display: block;
     margin-top: 24px;
     text-decoration: none;
@@ -52,7 +54,7 @@ export const Content = styled.div`
     }
 
     &:hover {
-      color: ${shade(0.9, "#16384E")};
+      color: ${shade(0.9, "#ffffff")};
       font-weight: 500;
     }
   }
@@ -60,17 +62,12 @@ export const Content = styled.div`
 
 export const Background = styled.div`
   flex: 1;
-  background-color: #102b3d;
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  text-align: center;
   h1 {
     margin-bottom: 16px;
-    color: #fff;
-  }
-  h2 {
-    color: #ccc;
   }
 `;

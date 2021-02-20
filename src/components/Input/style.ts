@@ -14,7 +14,6 @@ export const Container = styled.div`
   }
 
   input {
-    color: #ced4da;
     flex: 1;
     border: 0;
     background: transparent;
