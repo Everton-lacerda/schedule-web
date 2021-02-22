@@ -24,7 +24,12 @@ const SignUp: React.FC = () => {
 
           <Input name="email" type="email" placeholder="E-mail" icon={FiMail} />
 
-          <Input name="senha" type="Senha" placeholder="Senha" icon={FiLock} />
+          <Input
+            name="senha"
+            type="password"
+            placeholder="Senha"
+            icon={FiLock}
+          />
 
           <ButtonWhite type="submit">Cadastrar</ButtonWhite>
         </Form>
